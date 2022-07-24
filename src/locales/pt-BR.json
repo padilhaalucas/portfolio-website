@@ -1,0 +1,122 @@
+{
+  "welcome": {
+    "dynamicText": "Bem vindo(a)!!!",
+    "dynamicTextScrolled": "Continue com o scroll...",
+    "headline1": "Olá",
+    "headline2": "Sou o Lucas Padilha",
+    "headlineWordLoop": {
+      "1": "Engenheiro de Software.",
+      "2": "Consultor em tecnologia.",
+      "3": "Designer UX/UI."
+    },
+    "downloadCTA": "Download CV"
+  },
+  "aboutMe": {
+    "title": "Sobre mim",
+    "text": "Desde moleque eu sempre amei matemática, lógica e tudo que estivesse relacionado a esse mundo. Estudei Engenharia Civil na época da faculdade e não muito tempo depois, optei pela Engenharia de Software, foi onde encontrei a profissão exata para mim!",
+    "skills": {
+      "title": "Habilidades",
+      "first": {
+        "title": "Web | Mobile | Desktop",
+        "side-title": " - Programação",
+        "text": "Criar sites e aplicativos da web usando javascript, typescript e seus frameworks. Uso tecnologias como HTML, CSS, Javascript, typescript, e ferramentas como: VSCode ,React JS ,Next JS, Redux, Mongodb, Git, Github, Vite e muito mais."
+      },
+      "second": {
+        "title": "UX/UI",
+        "side-title": " - Design",
+        "text": "Tenho experiência na construção de UI, Websites, Apps, Fotos, Logos com ferramentas como Photoshop, Illustrator, Figma, Pen & Paper."
+      },
+      "third": {
+        "title": "Engenharia de Software",
+        "side-title": " - Engenharia",
+        "text": "Todos os processos para construir um sistema. Bancos de dados, segurança, hospedagem, desenvolvimento, gerenciamento, etc..."
+      }
+    },
+    "education": {
+      "title": "Educação",
+      "first": {
+        "title": "Engenharia Civil - FMU Fisp, Brasil, 2012",
+        "text": "Graduação em Engenharia Civil na FMU Fisp, em São Paulo, uma das maiores faculdades na América Latina."
+      },
+      "second": {
+        "title": "Engenharia de Software - Le Wagon, Portugal, 2019",
+        "text": "Aprofundado bootcamp (4 meses) em Lisboa, onde aprendi as principais tecnologias como Python, Javascript e React, por exemplo."
+      }
+    }
+  },
+  "services": {
+    "title": "Serviços",
+    "first": {
+      "title": "Engenharia",
+      "description": "Amo inventar e fazer coisas, desde o design, passando pela modelagem, até a construção do protótipo, por exemplo.",
+      "things-i-enjoy-title": "O que gosto de fazer",
+      "things-i-enjoy-text": "Construir, Consertar, Modelar, Reestruturar"
+    },
+    "second": {
+      "title": "Programação",
+      "description": "Gosto de fazer os códigos desde o começo, pensando no negócio, arquitetura, requisito e processo, e amo trazer vida às ideias, disponível para o mundo.",
+      "things-i-enjoy-title": "O que gosto de fazer",
+      "things-i-enjoy-text": "Lógica, Código bonito, Arquitetura, Animações",
+      "tools-title": "Ferramentas que uso",
+      "tools-text": "JavaScript, TypeScript, ReactJS, NextJS, Hydrogen, Redux, Git, GitHub, Vercel, Google, AWS"
+    },
+    "third": {
+      "title": "Design",
+      "description": "Valorizo estruturas de conteúdo simples e minimalistas, design claro, e interações pensadas e previamente estudadas.",
+      "things-i-enjoy-title": "O que gosto de fazer",
+      "things-i-enjoy-text": "UX/UI, Fluxos Web, Apps, Criação de marca"
+    }
+  },
+  "portfolio": {
+    "title": "Meus Últimos Projetos",
+    "subtitle": "Aqui estão alguns dos mais recentes projetos em que trabalhei.",
+    "first": {
+      "category": "React JS, Redux, Javascript, HTML, SaSS, Firebase",
+      "title": "Cocobear Internacional",
+      "info": "Website para uma empresa Tailandesa, Cocobear. Para ter todas as informações do produto, e da marca. Com serviço de subscrição."
+    },
+    "second": {
+      "category": "React JS, Redux, Javascript, HTML, SaSS, Firebase",
+      "title": "Cocobear Tailândia",
+      "info": "Website secundário da mesma empresa, Cocobear. Focado nos trabalhadores tailandeses, para aplicarem suas candidaturas de emprego."
+    },
+    "third": {
+      "category": "Next, Vercel, Prismic, JavaScript, HTML, SaSS",
+      "title": "Grupo Galpão",
+      "info": "Website para um grupo de teatro, baseado em Belo Horizonte, MG, Brasil. Conectado com Instagram, também possui um serviço CMS, para o time de conteúdo poder criar páginas dinamicamente."
+    },
+    "fourth": {
+      "category": "React JS, JavaScript, Redux, HTML, SaSS, Firebase",
+      "title": "Cred Real",
+      "info": "Web sistema para uma empresa de seguros, baseada em Santos, SP, Brasil. Para receber todos os pedidos dos clientes, contatos, produtos, e apresentação dos serviços. Também possui um painel admin."
+    },
+    "fifth": {
+      "category": "React JS, JavaScript, Redux, HTML, SaSS, Firebase",
+      "title": "Bauen Life",
+      "info": "Landing Page para uma holding de seguros, baseada in Santos, SP, Brasil. Recebe os dados de subscrição e envia para um serviço administrado no Google Workspace."
+    },
+    "sixth": {
+      "category": "React JS, Javascript, Material UI, Redux",
+      "title": "Clínica Ânima",
+      "info": "Websistema para uma clínica de psicologia, baseada em Florianópolis, SC, Brasil. Com um painel admin, para gerenciar os agendamentos."
+    }
+  },
+  "companies": {
+    "title": "Tenho orgulho em ter colaborado com algumas empresas incríveis"
+  },
+  "contact": {
+    "title": "Vamos conversar!",
+    "description": "Estou disponível para ajudar com os seus objetivos. Vou receber seu pedido de contato no meu email principal:",
+    "ctaText": "Enviar",
+    "placeholders": {
+      "name": "Seu nome *",
+      "email": "Seu email *",
+      "subject": "Assunto",
+      "message": "Sua mensagem *"
+    },
+    "responses": {
+      "success": "Email enviado, obrigado!",
+      "error": "Ocorreu um erro, por favor, tente novamente."
+    }
+  }
+}

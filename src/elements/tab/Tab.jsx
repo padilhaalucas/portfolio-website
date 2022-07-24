@@ -2,10 +2,11 @@ import React, { Component } from "react"
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
 
 class TabsTwo extends Component {
-  render() {
-    let tab1 = "Main skills",
-      tab2 = "Education & Certification"
-    const { tabStyle } = this.props
+  render() {  
+    const { tabStyle, tabs } = this.props
+
+    const [skills, education] = tabs
+    
     return (
       <div>
         {/* Start Tabs Area */}
@@ -15,8 +16,9 @@ class TabsTwo extends Component {
               <div className="col-lg-12">
                 <Tabs>
                   <TabList className={`${tabStyle}`}>
-                    <Tab>{tab1}</Tab>
-                    <Tab>{tab2}</Tab>
+                    { tabs && tabs?.map((tab, i) => 
+                      <Tab key={i}>{tab.title}</Tab>
+                    )}
                   </TabList>
 
                   <TabPanel>
@@ -24,29 +26,21 @@ class TabsTwo extends Component {
                       <ul>
                         <li>
                           <a href="#service">
-                            Web Development <span> - Development</span>
+                            {skills.first.title} <span>{skills.first?.['side-title']}</span>
                           </a>
-                          Build websites and web apps using javascript,
-                          typescript and their frameworks. I use technologies
-                          like HTML, CSS, Javascript, typescript, and tools
-                          like: VSCode ,React JS ,Next JS, Redux, Mongodb, Git,
-                          Github, Vite, and more.
+                          {skills.first.text}
                         </li>
                         <li>
                           <a href="#service">
-                            Web and user interface design<span> - Design</span>
+                            {skills.second.title} <span>{skills.second?.['side-title']}</span>
                           </a>
-                          I have experience building UI, Websites, Apps, Photos,
-                          Logos with tools like Photoshop, Illustrator, Figma,
-                          Pen {"&"} Paper
+                          {skills.second.text}
                         </li>
                         <li>
                           <a href="#service">
-                            Mechanical Engineering <span> - Engineering</span>
+                            {skills.third.title} <span>{skills.third?.['side-title']}</span>
                           </a>
-                          Mechanical Design, Problem Solving, Building, Fixing,
-                          Designing. I use tools like AutoCAD, SolidWorks, Pen
-                          {"&"} Paper, ToolBox.
+                          {skills.third.text}
                         </li>
                       </ul>
                     </div>
@@ -107,38 +101,15 @@ class TabsTwo extends Component {
                       <ul>
                         <li>
                           <a href="/service">
-                            Mechanical Engineering
-                            <span> - Mosul University, Iraq, 2019</span>
-                          </a>{" "}
-                          Bachelor's degree in applied science from the collage
-                          of mechanical engineering in Mosul, Iraq.
+                            {education.first.title} <span>{education.first?.['side-title']}</span>
+                          </a>
+                          {education.first.text}
                         </li>
                         <li>
                           <a href="/service">
-                            Full-Stack web development certification
-                            <span> - Kodluyoruz, Turkey, 2021</span>
-                          </a>{" "}
-                          In-depth 2-month-long full-stack coding bootcamp in
-                          Turkey with technologies like Python, Javascript and
-                          Angular.
-                        </li>
-                        <li>
-                          <a href="/service">
-                            React Development certification
-                            <span> - Re:Coded, Iraq, 2021</span>
-                          </a>{" "}
-                          Immersive 5-month-long course, with over 400 hours of
-                          coding and an acceptance rate of {"<6%"}.<br />
-                          HTML, CSS, Javascript, React Additional Coursework on
-                          teamwork, project management, agile methodologies and
-                          technologies and tools like Redux state management
-                          library, Firebase Firestore Cloud database, Jest
-                          testing framework, Figma prototype and UX/ UI design
-                          tool, continuous integration and Agile software
-                          development. Designed user interfaces using Figma and
-                          converted sketches and wireframes to functional
-                          reusable UI components using React JavaScript. Built
-                          projects from zero to production level.
+                            {education.second.title} <span>{education.second?.['side-title']}</span>
+                          </a>
+                          {education.second.text}
                         </li>
                       </ul>
                     </div>

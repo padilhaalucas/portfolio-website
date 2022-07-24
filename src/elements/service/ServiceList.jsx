@@ -52,42 +52,44 @@ let WebLogo = (
   </svg>
 )
 
-const ServiceList = [
-  {
-    icon: DesignLogo,
-    title: "Design",
-    description:
-      "I value simple content structure, clean design patterns, and thoughtful interactions.",
-    things: "UI, Web, Apps, Photos, Logos",
-    tools: "Photoshop, Illustrator, Figma, Pen & Paper",
-  },
-  {
-    icon: WebLogo,
-    title: "Web Development",
-    description:
-      "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
-    things: "HTML, CSS, Javascript, Typescript",
-    tools:
-      "VSCode ,React JS ,Next JS, Redux, Mongodb, Material UI, Bootstrap, Git, Github, Vite",
-  },
-  {
-    icon: EngLogo,
-    title: "Engineering",
-    description:
-      "I love inventing and making things, from designing to modelling to prototype building",
-    things: "Building, fixing, Designing",
-    tools: "AutoCAD, SolidWorks, Pen & Paper, ToolBox",
-  },
-]
-
 class ServiceThree extends Component {
   render() {
-    const { column } = this.props
+    const { column, localeTexts } = this.props
+
+
+    const ServiceList = [
+      {
+        icon: EngLogo,
+        title: localeTexts[0].title,
+        description: localeTexts[0].description,
+        thingsTitle: localeTexts[0]?.['things-i-enjoy-title'],
+        thingsText: localeTexts[0]?.['things-i-enjoy-text'],
+        tools: "",
+      },
+      {
+        icon: WebLogo,
+        title: localeTexts[1].title,
+        description: localeTexts[1].description ,
+        thingsTitle: localeTexts[1]?.['things-i-enjoy-title'],
+        thingsText: localeTexts[1]?.['things-i-enjoy-text'],
+        toolsTitle: localeTexts[1]?.['tools-title'],
+        toolsText: localeTexts[1]?.['tools-text'],
+      },
+      {
+        icon: DesignLogo,
+        title: localeTexts[2].title,
+        description: localeTexts[2].description,
+        thingsTitle: localeTexts[2]?.['things-i-enjoy-title'],
+        thingsText: localeTexts[2]?.['things-i-enjoy-text'],
+        tools: "",
+      },
+    ]
+
     const ServiceContent = ServiceList.slice(0, this.props.item)
 
     return (
       <React.Fragment>
-        <div className="row">
+        <div className="row align-items-center">
           {ServiceContent.map((val, i) => (
             <div className={`${column}`} key={i}>
               {/* <a href="/service-details"> */}
@@ -97,10 +99,14 @@ class ServiceThree extends Component {
                   <div className="content">
                     <h3 className="title">{val.title}</h3>
                     <p>{val.description}</p>
-                    <h4 className="title">Things I enjoy doing</h4>
-                    <p>{val.things}</p>
-                    <h4 className="title">Tools I use</h4>
-                    <p>{val.tools}</p>
+                    <h4 className="title">{val.thingsTitle}</h4>
+                    <p>{val.thingsText}</p>
+                    { (val.toolsTitle?.length !== 0 || val.toolsText?.length !== 0) &&
+                      <>
+                        <h4 className="title">{val.toolsTitle}</h4>
+                        <p>{val.toolsText}</p>
+                      </>
+                    }
                   </div>
                 </center>
               </div>

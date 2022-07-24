@@ -1,0 +1,122 @@
+{
+  "welcome": {
+    "dynamicText": "Welcome!!!",
+    "dynamicTextScrolled": "Keep scrolling...",
+    "headline1": "Hello",
+    "headline2": "I'm Lucas Padilha",
+    "headlineWordLoop": {
+      "1": "Software Engineer.",
+      "2": "Technology Consultant.",
+      "3": "UX/UI Designer."
+    },
+    "downloadCTA": "Download CV"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "text": "Since I was a kid I've always loved math, logic and everything related to this world. I studied Civil Engineering in college and not long after, I chose Software Engineering, that's where I found the exact profession for me!",
+    "skills": {
+      "title": "Main skills",
+      "first": {
+        "title": "Web Development",
+        "side-title": " - Development",
+        "text": "Build websites and web apps using javascript, typescript and their frameworks. I use technologies like HTML, CSS, Javascript, typescript, and tools like: VSCode ,React JS ,Next JS, Redux, Mongodb, Git, Github, Vite, and more."
+      },
+      "second": {
+        "title": "Web and user interface",
+        "side-title": " - Design",
+        "text": "I have experience building UI, Websites, Apps, Photos, Logos with tools like Photoshop, Illustrator, Figma, Pen & Paper."
+      },
+      "third": {
+        "title": "Software Engineering",
+        "side-title": " - Engineering",
+        "text": "All processes to build a system. Databases, security, hosting, development, management, etc..."
+      }
+    },
+    "education": {
+      "title": "Education",
+      "first": {
+        "title": "Civil Engineering - FMU Fisp, Brazil, 2012",
+        "text": "Bachelor's degree in Civil Engineering from the FMU Fisp, in São Paulo, one of the biggest colleges in Latin America."
+      },
+      "second": {
+        "title": "Software Engineering - Le Wagon, Portugal, 2019",
+        "text": "In-depth 4-month-long full-stack coding bootcamp in Lisbon with technologies like Python, Javascript and React, for example."
+      }
+    }
+  },
+  "services": {
+    "title": "Services",
+    "first": {
+      "title": "Engineering",
+      "description": "I love inventing and making things, from design, through modeling, to building the prototype, for example.",
+      "things-i-enjoy-title": "Things I enjoy doing",
+      "things-i-enjoy-text": "Building, Fixing, Designing, Restructuring"
+    },
+    "second": {
+      "title": "Software Development",
+      "description": "I like to code from scratch, thinking about the business, architecture, requirement and process, and I love bringing ideas to life, to the world.",
+      "things-i-enjoy-title": "Things I enjoy doing",
+      "things-i-enjoy-text": "Logic, Beautiful Code, Architecture, Animations",
+      "tools-title": "Tools I use",
+      "tools-text": "JavaScript, TypeScript, ReactJS, NextJS, Hydrogen, Redux, Git, GitHub, Vercel, Google, AWS"
+    },
+    "third": {
+      "title": "Design",
+      "description": "I value simple, minimalist content structures, clear design patterns, and thoughtful and previously studied interactions.",
+      "things-i-enjoy-title": "Things I enjoy doing",
+      "things-i-enjoy-text": "UX/UI, Web flows, Apps, Branding Creation"
+    }
+  },
+  "portfolio": {
+    "title": "My Latest Projects",
+    "subtitle": "Here are a few projects I've worked on recently.",
+    "first": {
+      "category": "React JS, Redux, Javascript, HTML, SaSS, Firebase",
+      "title": "Cocobear International",
+      "info": "A Website for a Thai Company, to handle all the information about the product and brand. With subscription service."
+    },
+    "second": {
+      "category": "React JS, Redux, Javascript, HTML, SaSS, Firebase",
+      "title": "Cocobear Thailand",
+      "info": "The secondary website for the same Cocobear company, focused on Thai workers, to submit their job applications."
+    },
+    "third": {
+      "category": "Next JS, Vercel, Prismic, JavaScript, HTML, SaSS",
+      "title": "Galpão Group",
+      "info": "A website for a Theater Group, based in Belo Horizonte, MG, Brazil. Connected with Instagram, also has a CMS service to the content team be able to create dynamic content."
+    },
+    "fourth": {
+      "category": "React JS, JavaScript, Redux, HTML, SaSS, Firebase",
+      "title": "Cred Real",
+      "info": "Websystem for an insurance company, based in Santos, SP, Brazil. To handle the clients requests, contacts, product and service presentation and also an admin dashboard."
+    },
+    "fifth": {
+      "category": "React JS, JavaScript, Redux, HTML, SaSS, Firebase",
+      "title": "Bauen Life",
+      "info": "Landing Page for an insurance holding company, based in Santos, SP, Brazil. Receives subscription data and send to a subscription service, managed by Google Workspace administration."
+    },
+    "sixth": {
+      "category": "React JS, Javascript, Material UI, Redux",
+      "title": "Ânima Clinic",
+      "info": "Websystem for a psychology clinic, based in Florianópolis, SC, Brazil. With an admin dashboard to manage the attendments."
+    }
+  },
+  "companies": {
+    "title": "I'm proud to have collaborated with some amazing companies"
+  },
+  "contact": {
+    "title": "Let's Talk!",
+    "description": "I am available to help with your goals. I'll receive your contact in my primary email:",
+    "ctaText": "Submit",
+    "placeholders": {
+      "name": "Your name *",
+      "email": "Your email *",
+      "subject": "Subject",
+      "message": "Your message *"
+    },
+    "responses": {
+      "success": "Email sent, thank you!",
+      "error": "An error occurred, please, try again."
+    }
+  }
+}
