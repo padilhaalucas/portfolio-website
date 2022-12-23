@@ -1,0 +1,43 @@
+.animate-character {
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #484848 0%,
+    #fff 29%,
+    #348BFF 67%,
+    #04377b 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  fill: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclipAndShadow 5s cubic-bezier(0.25, 0.25, 0.45, 0.25) infinite;
+  display: inline-block;
+  font-size: 5vw;
+}
+@media only screen and (max-width: 767px) {
+  .animate-character {
+    font-size: 15vw;
+    margin-bottom: 10vh;
+  }
+}
+
+@keyframes textclipAndShadow {
+  to {
+    background-position: -300% center;
+  }
+
+  0% {
+    text-shadow: none;
+  }
+  90% {
+    text-shadow: 6px 6px 12px #484848 , 0 0 54px #484848;
+  }
+  100% {
+    text-shadow: 6px 6px 12px #04377b , 0 0 54px #04377b;
+  }
+}

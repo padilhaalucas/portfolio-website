@@ -28,6 +28,7 @@ const Header = ({
   const menuTrigger = () => document.querySelector(".header-wrapper").classList.toggle("menu-open")
   const closeMenuTrigger = () => document.querySelector(".header-wrapper").classList.remove("menu-open")
 
+  const isDesktop = window.matchMedia('screen and (min-width: 1296px)').matches
   const siteLanguage = JSON.parse(localStorage.getItem('locale'))
   const isTranslated = siteLanguage.name === 'pt-BR'
 
@@ -57,10 +58,13 @@ const Header = ({
   const logoUrl = (
     <img 
       style={{
-        width: "80px",
-        height: '80px',
+        width: isDesktop ? '80px' : '55px',
+        height: isDesktop ? '80px' : '55px',
         opacity: 0.8,
-        transform: isTranslated ? 'translate(-20px) scaleX(-1)' : 'translate(0px) translate(20px) scaleX(1)'
+        transform: 
+          isTranslated ?
+          `translate(${isDesktop ? '-20px' : '-13px'}) scaleX(-1)` :
+          `translate(0px) translate(${isDesktop ? '20px' : '22px'}) scaleX(1)`
       }}
       src={avatar1} 
       alt="Ghost"
@@ -80,6 +84,7 @@ const Header = ({
                 src={brIcon}
                 onClick={() => translate('BR')}
                 style={{
+                  marginRight: isDesktop ? '0' : '5px',
                   width: '30px',
                   height: '30px',
                   opacity: isTranslated ? 1 : 0.25

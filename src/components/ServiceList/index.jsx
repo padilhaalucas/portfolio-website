@@ -1,6 +1,5 @@
 import React, { Component } from "react"
-// import { FiCast, FiLayers, FiUsers } from "react-icons/fi";
-// import DesignLogo from "../../dark/designer.svg";
+
 let DesignLogo = (
   <svg width="48px" height="48px" fill="#008bff" viewBox="0 0 48 48">
     <path
@@ -9,6 +8,7 @@ let DesignLogo = (
     ></path>
   </svg>
 )
+
 let EngLogo = (
   <svg
     id="Capa_1"
@@ -34,6 +34,7 @@ let EngLogo = (
     </g>
   </svg>
 )
+
 let WebLogo = (
   <svg width="50px" height="48px" viewBox="0 0 50 48" version="1.1">
     <g
@@ -54,8 +55,7 @@ let WebLogo = (
 
 class ServiceThree extends Component {
   render() {
-    const { column, localeTexts } = this.props
-
+    const { localeTexts, siteLanguage } = this.props
 
     const ServiceList = [
       {
@@ -89,30 +89,47 @@ class ServiceThree extends Component {
 
     return (
       <React.Fragment>
-        <div className="row align-items-center">
-          {ServiceContent.map((val, i) => (
-            <div className={`${column}`} key={i}>
-              {/* <a href="/service-details"> */}
-              <div className="service service__style--2">
-                <center>
-                  <div className="icon">{val.icon}</div>
-                  <div className="content">
-                    <h3 className="title">{val.title}</h3>
-                    <p>{val.description}</p>
-                    <h4 className="title">{val.thingsTitle}</h4>
-                    <p>{val.thingsText}</p>
-                    { (val.toolsTitle?.length !== 0 || val.toolsText?.length !== 0) &&
-                      <>
-                        <h4 className="title">{val.toolsTitle}</h4>
-                        <p>{val.toolsText}</p>
-                      </>
-                    }
+        <div id='service' className='fix'>
+          <div className='service-area creative-service-wrapper ptb--120 bg_color--5'>
+            <div className='container'>
+              <div className='row'>
+                <div className='col-lg-12'>
+                  <div className='section-title text-center service-style--3 mb--30 mb_sm--0'>
+                    <h2 className='title'>
+                      {siteLanguage.current.services.title}
+                    </h2>
                   </div>
-                </center>
+                </div>
               </div>
-              {/* </a> */}
+              <div className='row creative-service'>
+                <div className='col-lg-12'>
+                  <div className="row align-items-center">
+                    {ServiceContent.map((val, i) => (
+                      <div className={'col-lg-4 col-md-6 col-sm-6 col-12 text-left'} key={i}>
+                        <div className="service service__style--2">
+                          <center>
+                            <div className="icon">{val.icon}</div>
+                            <div className="content">
+                              <h3 className="title">{val.title}</h3>
+                              <p>{val.description}</p>
+                              <h4 className="title">{val.thingsTitle}</h4>
+                              <p>{val.thingsText}</p>
+                              { (val.toolsTitle?.length !== 0 || val.toolsText?.length !== 0) &&
+                                <>
+                                  <h4 className="title">{val.toolsTitle}</h4>
+                                  <p>{val.toolsText}</p>
+                                </>
+                              }
+                            </div>
+                          </center>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
       </React.Fragment>
     )

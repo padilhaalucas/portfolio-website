@@ -823,7 +823,8 @@ textarea:-ms-input-placeholder {
   box-shadow: 2px 2px 10px rgba(120, 120, 120, 0.1) !important;
   background-color: rgba(0, 0, 0, 0.3) !important;
   backdrop-filter: blur(12px) saturate(180%) contrast(90%) brightness(30%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%)
+    brightness(140%) !important;
 }
 .header-right {
   display: -webkit-flex;
@@ -845,7 +846,7 @@ textarea:-ms-input-placeholder {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: .5rem 0rem 1rem 0rem;
+  margin: 0.5rem 0rem 1rem 0rem;
 }
 
 .header-center img {
@@ -1476,12 +1477,12 @@ ul.social-share.social-style--2.color-black li a:hover {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .portfolio {
-    min-height: 216px;
+    min-height: 38vh;
   }
 }
 @media only screen and (max-width: 767px) {
   .portfolio {
-    min-height: 274px;
+    min-height: 40vh;
   }
 }
 
@@ -1518,8 +1519,20 @@ ul.social-share.social-style--2.color-black li a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 11vw;
+  height: 22vh;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .portfolio-item {
+    height: 10vh;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .portfolio-item {
+    height: 10vh;
+  }
+}
+
 .portfolio .thumbnail {
   position: absolute;
   top: 0;
@@ -1561,14 +1574,6 @@ ul.social-share.social-style--2.color-black li a:hover {
 }
 .portfolio .thumbnail.image-6 {
   background-image: url(./assets/images/portfolio/portfolio-6.jpg);
-  opacity: 0.3;
-}
-.portfolio .thumbnail.image-7 {
-  background-image: url(./assets/images/portfolio/portfolio-7.jpg);
-  opacity: 0.3;
-}
-.portfolio .thumbnail.image-10 {
-  background-image: url(./assets/images/portfolio/portfolio-10.jpg);
   opacity: 0.3;
 }
 .portfolio .thumbnail:after {
@@ -1697,6 +1702,7 @@ ul.social-share.social-style--2.color-black li a:hover {
   .portfolio.text-center .content {
     left: 10px;
     right: 10px;
+    top: 120px;
   }
 }
 .portfolio:hover .thumbnail-inner {
@@ -2430,21 +2436,32 @@ ul.tab-style--1 li:before {
   color: #fff;
   border-color: #008bff;
 }
-.active-dark .bg_image--25 {
+.active-dark .bg_image {
   background-color: #101010;
   background-image: url(./assets/images/bg/background.jpeg) !important;
-  /* background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover; */
-  
+
   /* Set a specific height */
-  min-height: 500px; 
+  min-height: 500px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.active-dark .bg_image-mobile {
+  background-color: #101010;
+  background-image: url(./assets/images/bg/background.jpeg) !important;
+
+  /* Set a specific height */
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 .particles {
   width: 70vw;
@@ -2455,6 +2472,18 @@ ul.tab-style--1 li:before {
   left: 14vw;
   transition: opacity 1s !important;
 }
+
+.particles-mobile {
+  width: 100vw;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 1%, 75% 100%, 25% 100%);
+  position: absolute;
+  top: -24.5vh;
+  left: 0vw;
+  opacity: 0.4;
+  transition: opacity 1s !important;
+}
+
 .lucas-photo {
   position: absolute;
   left: 75vw;

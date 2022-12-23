@@ -1,0 +1,5 @@
+export { default as defiance } from './defiance.svg'
+export { default as farfetch } from './farfetch.svg'
+export { default as ibm } from './ibm.svg'
+export { default as amyris } from './amyris.svg'
+export { default as biossance} from './biossance.svg'

@@ -46,56 +46,6 @@ class TabsTwo extends Component {
                     </div>
                   </TabPanel>
 
-                  {/* <TabPanel>
-                    <div className="single-tab-content">
-                      <ul>
-                        <li>
-                          <a href="/service">
-                            Awwwards.com <span>- Winner</span>
-                          </a>{" "}
-                          2019 - 2020
-                        </li>
-                        <li>
-                          <a href="/service">
-                            CSS Design Awards <span>- Winner</span>
-                          </a>{" "}
-                          2017 - 2018
-                        </li>
-                        <li>
-                          <a href="/service">
-                            Design nominees <span>- site of the day</span>
-                          </a>{" "}
-                          2013- 2014
-                        </li>
-                      </ul>
-                    </div>
-                  </TabPanel>
-
-                  <TabPanel>
-                    <div className="single-tab-content">
-                      <ul>
-                        <li>
-                          <a href="/service">
-                            Sr. Front-end Engineer<span> - Google</span>
-                          </a>{" "}
-                          2018 - Current
-                        </li>
-                        <li>
-                          <a href="/service">
-                            Front-end Engineer<span> - Microsoft</span>
-                          </a>{" "}
-                          2017 - 2018
-                        </li>
-                        <li>
-                          <a href="/service">
-                            Software Engineer<span> - Alibaba </span>
-                          </a>{" "}
-                          2013- 2014
-                        </li>
-                      </ul>
-                    </div>
-                  </TabPanel> */}
-
                   <TabPanel>
                     <div className="single-tab-content">
                       <ul>
