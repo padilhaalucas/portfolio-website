@@ -201,6 +201,7 @@ const PortfolioLanding = () => {
       isDesktop && _companiesAnimation()
       _contactAnimation()
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDesktop, isLoading])
   
   const renderLucasPhoto = () => (
