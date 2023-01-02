@@ -3,7 +3,7 @@ import React from 'react'
 import './style.css'
 import './stylev2.css'
 
-const Loader = () => {
+const Loader = ({version}) => {
   const v1 = () => {
     return (
       <div className='loader-main'>
@@ -32,7 +32,7 @@ const Loader = () => {
     )
   }
 
-  return v2()
+  return version === 'v1' ? v1() : v2()
 }
 
 export default Loader

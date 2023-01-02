@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { FiX, FiMenu } from "react-icons/fi"
 import Scrollspy from "react-scrollspy"
 import {
@@ -53,7 +53,7 @@ const Header = ({
         }
       }
     }
-  }, [window.scrollY])
+  }, [])
   
   const logoUrl = (
     <img 
@@ -89,6 +89,7 @@ const Header = ({
                   height: '30px',
                   opacity: isTranslated ? 1 : 0.25
                 }}
+                alt={'Brazil flag, meaning brazilian portuguese translation.'}
               />
               <img
                 src={usIcon}
@@ -98,6 +99,7 @@ const Header = ({
                   height: '30px',
                   opacity: isTranslated ? 0.25 : 1
                 }}
+                alt={'USA flag, meaning american english translation.'}
               />
             </div>
           </div>

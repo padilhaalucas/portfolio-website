@@ -8,7 +8,6 @@ import React, {
 } from 'react'
 
 import TextLoop from 'react-text-loop'
-import Particles from 'react-particles-js'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TextPlugin } from 'gsap/all'
@@ -16,7 +15,7 @@ import { TextPlugin } from 'gsap/all'
 import AboutMe from './components/AboutMe'
 import Helmet from './components/Common/Helmet'
 import Loader from './components/Common/Loader'
-import Companies from './components/Companies'
+import Companies from './components/Companies/index'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -66,20 +65,9 @@ const PortfolioLanding = () => {
     },
   ], [siteLanguage])
 
-  const [particlesOpacity, setParticlesOpacity] = useState(1)
-
   const avatarRef = useRef()
   
   const isDesktop = window.matchMedia('screen and (min-width: 1296px)').matches
-  
-  useEffect(() => {
-    window.onscroll = () => {
-      if (!isLoading) {
-        setParticlesOpacity(window.scrollY >= 320 ? 0 : 1)
-      }
-    }
-
-  }, [window.scrollY, isLoading])
 
   useEffect(() => {
     if (!isLoading) {
@@ -101,7 +89,7 @@ const PortfolioLanding = () => {
       gsap.registerPlugin(ScrollTrigger)
       gsap.registerPlugin(TextPlugin)
   
-      const _bannerAnimation = () => (
+      const _bannerAnimation = () => ([
         gsap.set(home, {
           xPercent: 0,
           yPercent: 0
@@ -134,9 +122,9 @@ const PortfolioLanding = () => {
           scale: 1.3,
           y: -550
         })
-      )
+      ])
   
-      const _avatarAnimation = () =>  (
+      const _avatarAnimation = () =>  ([
         gsap.set(about, {
           xPercent: 0,
           yPercent: 0
@@ -162,9 +150,10 @@ const PortfolioLanding = () => {
           rotation: 2,
           scale: 1.1
         })
+      ]
       )
   
-      const _companiesAnimation = () => (
+      const _companiesAnimation = () => ([
         gsap.set(companies, {
           xPercent: 0,
           yPercent: 0
@@ -183,9 +172,9 @@ const PortfolioLanding = () => {
         })
         .to(contact, {
           yoyo: true,
-          y: -100,
+          y: -10,
         })
-      )
+      ])
       
       const _contactAnimation = () => (
         gsap.timeline({
@@ -195,14 +184,15 @@ const PortfolioLanding = () => {
             pin: true,
             pinSpacing: false,
             start: 'start start',
-            end: '100%',
+            end: '80%',
             invalidateOnRefresh: false,
             once: false
           }
         })
         .to(companies, {
-          yoyo: true,
+          yoyo: false,
           opacity: 0,
+          y: 200,
         })
       )
   
@@ -211,7 +201,7 @@ const PortfolioLanding = () => {
       isDesktop && _companiesAnimation()
       _contactAnimation()
     }
-  }, [isDesktop, isLoading, window.scrollY])
+  }, [isDesktop, isLoading])
   
   const renderLucasPhoto = () => (
     <img
@@ -251,65 +241,6 @@ const PortfolioLanding = () => {
                 `}
                 key={index}
               >
-                { isDesktop &&
-                  <Particles
-                    className={`particles${isDesktop ? '' :'-mobile'}`}
-                    style={{ opacity: particlesOpacity }}
-                    params={{
-                      particles: {
-                        number: {
-                          value: 2000,
-                          density: {
-                            enable: false
-                          },
-                        },
-                        size: {
-                          value: 2.5,
-                          random: true,
-                          anim: {
-                            speed: 4,
-                            size_min: 0.3,
-                          },
-                        },
-                        line_linked: {
-                          color: '#6a6a6a8c',
-                          enable: false,
-                        },
-                        move: {
-                          random: true,
-                          speed: 0.5,
-                          direction: 'top',
-                          out_mode: 'out',
-                        },
-                      },
-                      interactivity: {
-                        detect_on: 'canvas',
-                        events: {
-                          onhover: {
-                            enable: true,
-                            mode: 'bubble',
-                          },
-                          onclick: {
-                            enable: false,
-                            mode: 'repulse',
-                          },
-                        },
-                        modes: {
-                          bubble: {
-                            distance: 150,
-                            duration: 5,
-                            size: 5,
-                            opacity: 1,
-                          },
-                          repulse: {
-                            distance: 300,
-                            duration: 30,
-                          },
-                        },
-                      },
-                    }}
-                  />
-                }
                 { isDesktop && renderLucasPhoto()}
                 <div
                   className='container'
@@ -438,10 +369,10 @@ const PortfolioLanding = () => {
     return (
       <div className='active-dark'>
         <Helmet pageTitle='Lucas Padilha' />
-        { isLoading ? <Loader/> : renderLandingPage() }
+        { isLoading ? <Loader version={'v2'}/> : renderLandingPage() }
       </div>
     )
-  }, [isLoading, siteLanguage])
+  }, [isLoading, isDesktop, slideList, siteLanguage])
 
   return renderAllContent()
 

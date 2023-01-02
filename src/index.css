@@ -2441,7 +2441,7 @@ ul.tab-style--1 li:before {
   background-image: url(./assets/images/bg/background.jpeg) !important;
 
   /* Set a specific height */
-  min-height: 500px;
+  min-height: 200px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -2637,4 +2637,5 @@ ul.tab-style--1 li.react-tabs__tab--selected::before {
 }
 .single-tab-content ul li a span {
   font-weight: 300;
+  color: #006dc7;
 }

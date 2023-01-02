@@ -29,10 +29,12 @@ const Companies = ({ localeLanguage }) => {
               <div className='col-lg-12'>
               <p
                 style={{
-                  fontSize: '18px',
+                  fontSize: '24px',
+                  fontWeight: 'bold',
                   lineHeight: '30px',
                   textAlign: 'center',
-                  color: '#6c757d',
+                  textShadow: '1px 1px 1px rgba(140, 140, 140, .4)',
+                  color: '#006dc7',
                 }}
               >
                 {localeLanguage.title}
