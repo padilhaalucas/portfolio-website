@@ -14,7 +14,7 @@ import brIcon from '../../assets/images/icons/br.webp'
 
 const socialShare = [
   { Social: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/lucas-padilhax' },
-  { Social: <FaGithub />, link: 'https://github.com/padilhalucas' },
+  { Social: <FaGithub />, link: 'https://github.com/padilhaalucas' },
   { Social: <FaGitlab />, link: 'https://gitlab.com/_lucaspadilha' },
   { Social: <FaInstagram />, link: 'https://www.instagram.com/_lucaspadilha' },
 ]
@@ -140,7 +140,11 @@ const Header = ({
             <ul className="social-share social-style--2 color-black d-flex justify-content-start liststyle">
               {socialShare.map((val, i) => (
                 <li key={i}>
-                  <a href={`${val.link}`}>{val.Social}</a>
+                  <a
+                    href={val.link}
+                    target={'_blank'}
+                    rel="noreferrer"  
+                  >{val.Social}</a>
                 </li>
               ))}
             </ul>
