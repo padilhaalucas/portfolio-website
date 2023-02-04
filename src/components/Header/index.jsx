@@ -37,9 +37,7 @@ const Header = ({
       const header = document.querySelector(".header--fixed").classList
 
       return window.scrollY > 100 ? 
-        header.add("fill-navbar") 
-        :
-        header.remove("fill-navbar")
+        header.add("fill-navbar") : header.remove("fill-navbar")
     })
 
     let elements = document.querySelectorAll(".has-dropdown > a")
@@ -49,6 +47,7 @@ const Header = ({
           this.parentElement
             .querySelector(".submenu")
             .classList.toggle("active")
+
           this.classList.toggle("open")
         }
       }
@@ -111,7 +110,6 @@ const Header = ({
                 "about",
                 "service",
                 "portfolio",
-                "blog",
                 "contact",
               ]}
               currentClassName="is-current"
@@ -136,11 +134,18 @@ const Header = ({
           </nav>
         </div>
         <div className="header-right">
+          <div className="header-btn gradient">
+            <a className="rn-btn" href="https://ko-fi.com/padilha" target={'_blank'} rel='noreferrer'>
+              <span style={{ color: 'white'}}>Buy me a </span><span style={{ fontSize: '20px'}}>☕️</span>
+            </a>
+          </div>
+
           <div className="social-share-inner">
             <ul className="social-share social-style--2 color-black d-flex justify-content-start liststyle">
               {socialShare.map((val, i) => (
                 <li key={i}>
                   <a
+                    style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}
                     href={val.link}
                     target={'_blank'}
                     rel="noreferrer"  
@@ -149,11 +154,6 @@ const Header = ({
               ))}
             </ul>
           </div>
-          {/* <div className="header-btn">
-            <a className="rn-btn" href="#contact">
-              <span>Contact me</span>
-            </a>
-          </div> */}
           {/* Start Hamburger Menu  */}
           <div className="hamburger-menu d-block d-lg-none pl--20">
             <span

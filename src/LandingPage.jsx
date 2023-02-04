@@ -145,7 +145,7 @@ const PortfolioLanding = () => {
         .to(avatar, {
           yoyo: true,
           opacity: 1,
-          x: 480,
+          x: 440,
           y: 30,
           rotation: 2,
           scale: 1.1
@@ -253,7 +253,6 @@ const PortfolioLanding = () => {
                   <div className='row' id='title-row'>
                     <div className={'col-lg-12'}>
                       <div className={`inner ${value.textPosition}`}>
-                        
                         <span id='text-above-headline'>
                           {siteLanguage.current.welcome.dynamicText}
                         </span>
@@ -292,12 +291,8 @@ const PortfolioLanding = () => {
                           </button>
 
                         </div>
-                        {value.description ? (
-                          <p className='description'>{value.description}</p>
-                        ) : (
-                          ''
-                        )}
-                        {value.buttonText ? (
+                        { value.description ? <p className='description'>{value.description}</p> : <></> }
+                        { value.buttonText ? 
                           <div className='slide-btn'>
                             <a
                               className='rn-button-style--2 btn-primary-color'
@@ -305,10 +300,8 @@ const PortfolioLanding = () => {
                             >
                               {value.buttonText}
                             </a>
-                          </div>
-                        ) : (
-                          ''
-                        )}
+                          </div> : <></>
+                        }
                       </div>
                     </div>
                   </div>
