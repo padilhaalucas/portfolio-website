@@ -54,7 +54,7 @@ const Footer = () => {
           <div className='col-lg-4 col-md-12 col-sm-12 col-12'>
             <div className='inner text-lg-right text-center mt_md--20 mt_sm--20'>
               <div className='text'>
-                <p>Lucas Padilha | 2022</p>
+                <p>Lucas Padilha | 2023</p>
               </div>
             </div>
           </div>

@@ -1478,25 +1478,30 @@ ul.social-share.social-style--2.color-black li a:hover {
   min-height: 260px;
   width: 100%;
   padding-top: 35%;
+  height: auto;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .portfolio {
     min-height: 255px;
+    height: auto;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .portfolio {
     min-height: 190px;
+    height: auto;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .portfolio {
     min-height: 38vh;
+    height: auto;
   }
 }
 @media only screen and (max-width: 767px) {
   .portfolio {
-    min-height: 40vh;
+    min-height: 48vh;
+    height: auto;
   }
 }
 
@@ -1566,6 +1571,7 @@ ul.social-share.social-style--2.color-black li a:hover {
   transition: transform 0.28s ease, -webkit-transform 0.28s ease;
   z-index: 4;
 }
+
 .portfolio .thumbnail.image-1 {
   background-image: url(./assets/images/portfolio/portfolio-1.jpg);
   opacity: 0.3;

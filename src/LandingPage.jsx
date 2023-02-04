@@ -286,7 +286,7 @@ const PortfolioLanding = () => {
                                 color: 'white',
                               }}
                               href={myPDF}
-                              download='Lucas Padilha - 2022.pdf'
+                              download='Lucas Padilha - 2023.pdf'
                             >
                               {siteLanguage.current.welcome.downloadCTA}
                             </a>

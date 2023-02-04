@@ -88,17 +88,17 @@
     "fourth": {
       "category": "NextJS, TypeScript, Docker, Kubernetes, Elastic",
       "title": "Biossance",
-      "info": "Lead tech at store. Our e-commerce platform attracts millions, sells conscious, effective solutions based on advanced ingredients like seaweed, chia oil, hyaluronic acid. User-friendly, excellent management, million-dollar revenue."
+      "info": "Huge e-commerce platform, sells conscious, effective solutions based on advanced ingredients. User-friendly, excellent management, million-dollar revenue."
     },
     "fifth": {
       "category": "React JS, JavaScript, Redux, HTML, SaSS, Firebase",
       "title": "Bauen Life",
-      "info": "Landing Page for an insurance holding company, based in Santos, SP, Brazil. Receives subscription data and send to a subscription service, managed by Google Workspace administration."
+      "info": "Landing Page for an insurance holding company, based in Santos, Brazil. Receives subscription data and send to a subscription service, managed by Google Workspace administration."
     },
     "sixth": {
       "category": "React JS, Javascript, Material UI, Redux",
       "title": "Ânima Clinic",
-      "info": "Websystem for a psychology clinic, based in Florianópolis, SC, Brazil. With an admin dashboard to manage the attendments."
+      "info": "Websystem for a psychology clinic, based in Florianópolis, Brazil. With an admin dashboard to manage the attendments."
     }
   },
   "companies": {

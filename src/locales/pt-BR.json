@@ -88,17 +88,17 @@
     "fourth": {
       "category": "NextJS, TypeScript, Docker, Kubernetes, Elastic",
       "title": "Biossance",
-      "info": "Lead em tecnologia da loja. Plataforma com milhões de acessos, vende soluções conscientes e eficazes. Baseadas em ingredientes avançados, user-friendly, gestão excelente. Faturamento milionário"
+      "info": "Plataforma com milhões de acessos, vende soluções conscientes e eficazes. Baseadas em ingredientes avançados, user-friendly, gestão excelente. Faturamento milionário"
     },
     "fifth": {
       "category": "React JS, JavaScript, Redux, HTML, SaSS, Firebase",
       "title": "Bauen Life",
-      "info": "Landing Page para uma holding de seguros, baseada in Santos, SP, Brasil. Recebe os dados de subscrição e envia para um serviço administrado no Google Workspace."
+      "info": "Landing Page para uma holding de seguros, de Santos, Brasil. Recebe os dados de subscrição e envia para um serviço administrado no Google Workspace."
     },
     "sixth": {
       "category": "React JS, Javascript, Material UI, Redux",
       "title": "Clínica Ânima",
-      "info": "Websistema para uma clínica de psicologia, baseada em Florianópolis, SC, Brasil. Com um painel admin, para gerenciar os agendamentos."
+      "info": "Websistema para uma clínica de psicologia, de Florianópolis, Brasil. Com um painel admin, para gerenciar os agendamentos."
     }
   },
   "companies": {
