@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { FiX, FiMenu } from "react-icons/fi"
+import { FiX } from "react-icons/fi"
 import Scrollspy from "react-scrollspy"
 import {
   FaGitlab,
@@ -25,7 +25,7 @@ const Header = ({
   homeLink
 }) => {
 
-  const menuTrigger = () => document.querySelector(".header-wrapper").classList.toggle("menu-open")
+  // const menuTrigger = () => document.querySelector(".header-wrapper").classList.toggle("menu-open")
   const closeMenuTrigger = () => document.querySelector(".header-wrapper").classList.remove("menu-open")
 
   const isDesktop = window.matchMedia('screen and (min-width: 1296px)').matches
@@ -133,10 +133,11 @@ const Header = ({
             </Scrollspy>
           </nav>
         </div>
-        <div className="header-right">
-          <div className="header-btn gradient">
-            <a className="rn-btn" href="https://ko-fi.com/padilha" target={'_blank'} rel='noreferrer'>
-              <span style={{ color: 'white'}}>Buy me a </span><span style={{ fontSize: '20px'}}>☕️</span>
+        <div className="header-right" style={{width: 'auto'}}>
+          <div className="header-btn gradient" style={{width: 'auto'}}>
+            <a className="rn-btn" href="https://ko-fi.com/padilha" target={'_blank'} rel='noreferrer' style={{width: 'auto'}}>
+              <span style={{ color: 'white' }}>{isTranslated ? 'Pagar um': 'Buy me a'} </span>
+              <span style={{ fontSize: '20px', width: 'auto'}}>☕️</span>
             </a>
           </div>
 
@@ -155,14 +156,14 @@ const Header = ({
             </ul>
           </div>
           {/* Start Hamburger Menu  */}
-          <div className="hamburger-menu d-block d-lg-none pl--20">
+          {/* <div className="hamburguer-menu d-block d-xl-none pl-0 mb-lg-5">
             <span
               onClick={menuTrigger}
               className="menutrigger text-white"
             >
               <FiMenu />
             </span>
-          </div>
+          </div> */}
           {/* End Hamburger Menu  */}
           <div className="close-menu d-block d-lg-none">
             <span onClick={closeMenuTrigger} className="closeTrigger">

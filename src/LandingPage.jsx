@@ -263,11 +263,13 @@ const PortfolioLanding = () => {
                             <br/>
                               {siteLanguage.current.welcome.headline2}
                             <br />
-                            <TextLoop interval={1500}>
-                              <span>{siteLanguage.current.welcome.headlineWordLoop['1']}</span>
-                              <span>{siteLanguage.current.welcome.headlineWordLoop['2']}</span>
-                              <span>{siteLanguage.current.welcome.headlineWordLoop['3']}</span>
-                            </TextLoop>{' '}
+                            <div style={{ width: '80vw', maxWidth: '90vw', display: 'block', wordWrap: 'wrap'}}>
+                              <TextLoop interval={1500}>
+                                <span>{siteLanguage.current.welcome.headlineWordLoop['1']}</span>
+                                <span>{siteLanguage.current.welcome.headlineWordLoop['2']}</span>
+                                <span>{siteLanguage.current.welcome.headlineWordLoop['3']}</span>
+                              </TextLoop>{' '}
+                            </div>
                           </h1>
                           <button
                             style={{

@@ -381,6 +381,12 @@ textarea,
 ul.social-share li a {
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+@media only screen and (max-width: 767px) {
+  .social-share-inner {
+    display: none;
+  }
+}
+
 .service.service__style--2 {
   position: relative;
 }
@@ -640,6 +646,7 @@ textarea:-ms-input-placeholder {
 }
 
 .header-btn {
+  width: auto;
   margin-bottom: 1rem;
 }
 
@@ -680,12 +687,14 @@ textarea:-ms-input-placeholder {
     height: 39px;
     line-height: 33px;
     font-size: 12px;
+    width: auto;
   }
 }
 @media only screen and (max-width: 575px) {
   .header-area .header-wrapper a.rn-btn {
     height: 34px;
     line-height: 29px;
+    width: auto;
   }
 }
 .header-area .header-wrapper a.rn-btn:before {
@@ -697,11 +706,11 @@ textarea:-ms-input-placeholder {
   color: #fff;
   border-radius: 6px;
 }
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   .header-area .header-wrapper a.rn-btn {
     display: none;
   }
-}
+} */
 @media only screen and (max-width: 767px) {
   .header-area .header-wrapper .logo a img {
     width: 120px;
@@ -818,8 +827,8 @@ textarea:-ms-input-placeholder {
 .header-area.header--fixed.sticky .logo a img {
   height: 50px;
 }
-.header-area.color-black .humberger-menu span.text-white,
-.header-area.header--fixed.sticky .humberger-menu span.text-white {
+.header-area.color-black .hamburguer-menu span.text-white,
+.header-area.header--fixed.sticky .hamburguer-menu span.text-white {
   color: #1f1f25 !important;
 }
 .fill-navbar {
@@ -1145,20 +1154,20 @@ textarea:-ms-input-placeholder {
     margin: 0;
   }
 }
-.humberger-menu span {
+.hamburguer-menu span {
   cursor: pointer;
 }
 @media only screen and (max-width: 767px) {
-  .humberger-menu span {
+  .hamburguer-menu span {
     font-size: 28px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .humberger-menu span {
+  .hamburguer-menu span {
     font-size: 28px;
   }
 }
-.header-wrapper.menu-open .humberger-menu span {
+.header-wrapper.menu-open .hamburguer-menu span {
   opacity: 0;
 }
 .mainmenunav ul.mainmenu {
@@ -1222,7 +1231,7 @@ textarea:-ms-input-placeholder {
 .mainmenunav ul.mainmenu > li:last-child {
   margin-right: 0;
 }
-.humberger-menu span.text-white {
+.hamburguer-menu span.text-white {
   color: #c6c9d8 !important;
 }
 .color-black .mainmenunav ul.mainmenu > li > a {
@@ -1232,17 +1241,17 @@ textarea:-ms-input-placeholder {
   color: #008bff;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .header-style-two .humberger-menu span.text-white {
+  .header-style-two .hamburguer-menu span.text-white {
     color: #1d1d24 !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .header-style-two .humberger-menu span.text-white {
+  .header-style-two .hamburguer-menu span.text-white {
     color: #1d1d24 !important;
   }
 }
 @media only screen and (max-width: 767px) {
-  .header-style-two .humberger-menu span.text-white {
+  .header-style-two .hamburguer-menu span.text-white {
     color: #1d1d24 !important;
   }
 }
@@ -1356,6 +1365,7 @@ button.rn-btn {
   color: #008bff;
   letter-spacing: 0.2px;
   text-transform: uppercase;
+  width: auto;
 }
 button.rn-btn:hover {
   border: 1px solid #fff;
@@ -2509,7 +2519,7 @@ ul.tab-style--1 li:before {
   display: none;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .active-dark .header-style-two .humberger-menu span.text-white {
+  .active-dark .header-style-two .hamburguer-menu span.text-white {
     color: #c6c9d8 !important;
   }
   .active-dark .header-area .header-wrapper .mainmenunav ul.mainmenu {
@@ -2517,7 +2527,7 @@ ul.tab-style--1 li:before {
   }
   .active-dark
     .header-area.header--fixed.sticky
-    .humberger-menu
+    .hamburguer-menu
     span.text-white,
   .active-dark .header-area .header-wrapper.menu-open .close-menu span {
     color: #c6c9d8 !important;
@@ -2545,7 +2555,7 @@ ul.tab-style--1 li:before {
   }
 }
 @media only screen and (max-width: 767px) {
-  .active-dark .header-style-two .humberger-menu span.text-white {
+  .active-dark .header-style-two .hamburguer-menu span.text-white {
     color: #c6c9d8 !important;
   }
   .active-dark .header-area .header-wrapper .mainmenunav ul.mainmenu {
@@ -2553,7 +2563,7 @@ ul.tab-style--1 li:before {
   }
   .active-dark
     .header-area.header--fixed.sticky
-    .humberger-menu
+    .hamburguer-menu
     span.text-white,
   .active-dark .header-area .header-wrapper.menu-open .close-menu span {
     color: #c6c9d8 !important;
