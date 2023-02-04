@@ -86,9 +86,9 @@
       "info": "A website for a Theater Group, based in Belo Horizonte, MG, Brazil. Connected with Instagram, also has a CMS service to the content team be able to create dynamic content."
     },
     "fourth": {
-      "category": "React JS, JavaScript, Redux, HTML, SaSS, Firebase",
-      "title": "Cred Real",
-      "info": "Websystem for an insurance company, based in Santos, SP, Brazil. To handle the clients requests, contacts, product and service presentation and also an admin dashboard."
+      "category": "NextJS, TypeScript, Docker, Kubernetes, Elastic",
+      "title": "Biossance",
+      "info": "Lead tech at store. Our e-commerce platform attracts millions, sells conscious, effective solutions based on advanced ingredients like seaweed, chia oil, hyaluronic acid. User-friendly, excellent management, million-dollar revenue."
     },
     "fifth": {
       "category": "React JS, JavaScript, Redux, HTML, SaSS, Firebase",

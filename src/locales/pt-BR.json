@@ -86,9 +86,9 @@
       "info": "Website para um grupo de teatro, baseado em Belo Horizonte, MG, Brasil. Conectado com Instagram, também possui um serviço CMS, para o time de conteúdo poder criar páginas dinamicamente."
     },
     "fourth": {
-      "category": "React JS, JavaScript, Redux, HTML, SaSS, Firebase",
-      "title": "Cred Real",
-      "info": "Web sistema para uma empresa de seguros, baseada em Santos, SP, Brasil. Para receber todos os pedidos dos clientes, contatos, produtos, e apresentação dos serviços. Também possui um painel admin."
+      "category": "NextJS, TypeScript, Docker, Kubernetes, Elastic",
+      "title": "Biossance",
+      "info": "Lead em tecnologia da loja. Plataforma com milhões de acessos, vende soluções conscientes e eficazes. Baseadas em ingredientes avançados, user-friendly, gestão excelente. Faturamento milionário"
     },
     "fifth": {
       "category": "React JS, JavaScript, Redux, HTML, SaSS, Firebase",

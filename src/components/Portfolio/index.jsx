@@ -9,7 +9,7 @@ class PortfolioList extends Component {
         image: "image-4",
         category: localePortfolio.fourth.category,
         title: localePortfolio.fourth.title,
-        link: "https://seguroscredreal.com.br",
+        link: "https://biossance.com",
         info: localePortfolio.fourth.info,
       },
       {
