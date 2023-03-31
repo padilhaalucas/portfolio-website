@@ -350,8 +350,7 @@ const PortfolioLanding = () => {
         { sections.services }
         { sections.portfolio }
         { sections.companies }
-        {/* { sections.contact } */}
-        <Calendar />
+        { sections.contact }
         { sections.footer }
       </>
     )
