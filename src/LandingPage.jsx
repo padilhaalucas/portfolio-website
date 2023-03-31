@@ -5,6 +5,7 @@ import React, {
   useState,
   useMemo,
   useRef,
+  memo
 } from 'react'
 
 import TextLoop from 'react-text-loop'
@@ -19,26 +20,27 @@ import Companies from './components/Companies/index'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import Calendar from './components/Calendar'
 import PortfolioList from './components/Portfolio'
 import ServiceList from './components/ServiceList'
 
 import lucasPhoto from './assets/images/about/lucas1.png'
 import myPDF from './assets/lucasPadilha2022.pdf'
 
-import us from './locales/en-US.json'
-import br from './locales/pt-BR.json'
+import enUS from './locales/en-US.json'
+import ptBR from './locales/pt-BR.json'
 
 const PortfolioLanding = () => {
   const [isLoading, setIsLoading] = useState(true)
 
-  const initialState = { current: us, name: 'en-US' }
+  const initialState = { current: enUS, name: 'en-US' }
 
   const reducer = (state, action) => {
     switch (action.type) {
       case "TRANSLATE_BR":
-        return ({ current: br, name: 'pt-BR' })
+        return ({ current: ptBR, name: 'pt-BR' })
       case "TRANSLATE_US":
-        return ({ current: us, name: 'en-US' })
+        return ({ current: enUS, name: 'en-US' })
       default:
         return state;
       }
@@ -72,139 +74,130 @@ const PortfolioLanding = () => {
   useEffect(() => {
     if (!isLoading) {
       // Items that will be animated
-      let lucasPhoto = document.querySelector('#lucas-photo')
-      let avatar = document.querySelector('#avatar-1')
-      let titleScroll = document.querySelector('#scrollable-title-row')
-      let textAboveHeadline = document.querySelector('#text-above-headline')
-      let contact = document.querySelector('#contact')
-      
-      // Sections to block until animation is done
-      let home = document.querySelector('#home')
-      let about = document.querySelector('#about')
-      let companies = document.querySelector('.companies')
-      
-      // Sections to be triggered
-      let portfolio = document.querySelector('.portfolio-cards-inner')
-      
-      gsap.registerPlugin(ScrollTrigger)
-      gsap.registerPlugin(TextPlugin)
+      const lucasPhoto = document.querySelector('#lucas-photo');
+      const avatarElement = document.querySelector('#avatar-1');
+      const titleScroll = document.querySelector('#scrollable-title-row');
+      const textAboveHeadline = document.querySelector('#text-above-headline');
+      const contactElement = document.querySelector('#contact');
   
-      const _bannerAnimation = () => ([
-        gsap.set(home, {
+      // Sections to block until animation is done
+      const homeSection = document.querySelector('#home');
+      const aboutSection = document.querySelector('#about');
+      const companiesSection = document.querySelector('.companies');
+  
+      // Sections to be triggered
+      const portfolioSection = document.querySelector('.portfolio-cards-inner');
+  
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.registerPlugin(TextPlugin);
+  
+      const bannerAnimationTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: homeSection,
+          scrub: true,
+          pin: true,
+          pinSpacing: true,
+          start: 'top top',
+          end: '80%',
+          invalidateOnRefresh: false,
+          once: false,
+        },
+      })
+        .set(homeSection, {
           xPercent: 0,
-          yPercent: 0
-        }),
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: home,
-            scrub: true,
-            pin: true,
-            pinSpacing: true,
-            start: 'top top',
-            end: '80%',
-            invalidateOnRefresh: false,
-            once: false
-          }
+          yPercent: 0,
         })
         .to(titleScroll, {
           yoyo: true,
-          y: 200
+          y: 200,
         })
         .to(textAboveHeadline, {
           yoyo: true,
           text: `${siteLanguage.current.welcome.dynamicTextScrolled} 🖱`,
           textShadow: '4px 4px 15px rgba(200, 200, 200, 0.4)',
-          scale: 1
+          scale: 1,
         })
         .to(lucasPhoto, {
           yoyo: true,
           opacity: 1,
           scale: 1.3,
-          y: -550
-        })
-      ])
+          y: -550,
+        });
   
-      const _avatarAnimation = () =>  ([
-        gsap.set(about, {
+      const avatarAnimationTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: aboutSection,
+          toggleActions: 'none pause none none',
+          scrub: true,
+          pin: true,
+          pinSpacing: true,
+          start: 'top top',
+          end: '80%',
+          invalidateOnRefresh: false,
+          once: false,
+        },
+      })
+        .set(aboutSection, {
           xPercent: 0,
-          yPercent: 0
-        }),
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: about,
-            toggleActions: 'none pause none none',
-            scrub: true,
-            pin: true,
-            pinSpacing: true,
-            start: 'top top',
-            end: '80%',
-            invalidateOnRefresh: false,
-            once: false
-          }
+          yPercent: 0,
         })
-        .to(avatar, {
+        .to(avatarElement, {
           yoyo: true,
           opacity: 1,
           x: 440,
           y: 30,
           rotation: 2,
-          scale: 1.1
-        })
-      ]
-      )
+          scale: 1.1,
+        });
   
-      const _companiesAnimation = () => ([
-        gsap.set(companies, {
+      const companiesAnimationTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: portfolioSection,
+          scrub: true,
+          pin: true,
+          pinSpacing: false,
+          start: 'start end',
+          end: '100%',
+          invalidateOnRefresh: false,
+          once: false,
+        },
+      })
+        .set(companiesSection, {
           xPercent: 0,
-          yPercent: 0
-        }),
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: portfolio,
-            scrub: true,
-            pin: true,
-            pinSpacing: false,
-            start: 'start end',
-            end: '100%',
-            invalidateOnRefresh: false,
-            once: false
-          }
+          yPercent: 0,
         })
-        .to(contact, {
+        .to(contactElement, {
           yoyo: true,
           y: -10,
-        })
-      ])
-      
-      const _contactAnimation = () => (
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: companies,
-            scrub: true,
-            pin: true,
-            pinSpacing: false,
-            start: 'start start',
-            end: '80%',
-            invalidateOnRefresh: false,
-            once: false
-          }
-        })
-        .to(companies, {
+        });
+  
+      const contactAnimationTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: companiesSection,
+          scrub: true,
+          pin: true,
+          pinSpacing: false,
+          start: 'start start',
+          end: '80%',
+          invalidateOnRefresh: false,
+          once: false,
+        },
+      })
+        .to(companiesSection, {
           yoyo: false,
           opacity: 0,
           y: 200,
-        })
-      )
+        });
   
-      _bannerAnimation()
-      isDesktop && _avatarAnimation()
-      isDesktop && _companiesAnimation()
-      _contactAnimation()
+      bannerAnimationTimeline.call()
+      isDesktop && avatarAnimationTimeline.call()
+      isDesktop && companiesAnimationTimeline.call()
+      contactAnimationTimeline.call()
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDesktop, isLoading])
   
-  const renderLucasPhoto = () => (
+  const LucasPhoto = memo(() => (
     <img
       id='lucas-photo'
       className='lucas-photo'
@@ -217,7 +210,7 @@ const PortfolioLanding = () => {
       src={lucasPhoto}
       alt='About Images'
     />
-  )
+  ))
 
   const renderAllContent = useCallback(() => {
     const sections = {
@@ -242,7 +235,7 @@ const PortfolioLanding = () => {
                 `}
                 key={index}
               >
-                { isDesktop && renderLucasPhoto()}
+                { isDesktop && <LucasPhoto/>}
                 <div
                   className='container'
                   style={{
@@ -357,7 +350,8 @@ const PortfolioLanding = () => {
         { sections.services }
         { sections.portfolio }
         { sections.companies }
-        { sections.contact }
+        {/* { sections.contact } */}
+        <Calendar />
         { sections.footer }
       </>
     )
@@ -371,7 +365,6 @@ const PortfolioLanding = () => {
   }, [isLoading, isDesktop, slideList, siteLanguage])
 
   return renderAllContent()
-
 }
 
 export default PortfolioLanding
